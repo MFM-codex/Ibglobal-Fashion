@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4eedf;
+  color: #241f1c;
+}
+
+/* The one recurring structural device across the site: a tape-measure tick
+   rule, used as a section divider in place of a plain hairline. */
+.tape-rule {
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #b8863b 0px,
+    #b8863b 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  background-position: bottom;
+  background-size: 8px 6px;
+  background-repeat: repeat-x;
+  opacity: 0.6;
+}
+
+/* Visible keyboard focus ring, kept consistent across all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #b8863b;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
